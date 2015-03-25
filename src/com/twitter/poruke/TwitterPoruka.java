@@ -1,5 +1,7 @@
 package com.twitter.poruke;
 
+import java.util.GregorianCalendar;
+
 /**
  * Predstavlja poruku na Twitter-u
  * 
@@ -19,6 +21,19 @@ public class TwitterPoruka {
 	 */
 	private String poruka;
 	
+	/**
+	 * Vreme objavljivanja poruke
+	 */
+	private GregorianCalendar vreme = new GregorianCalendar();
+	
+	/**
+	 * Metoda vraca vreme objavljivanja poruke, tj. vrednost atributa vreme
+	 * @return vreme objavljivanja poruke 
+	 */
+	public GregorianCalendar getVreme() {
+		return vreme;
+	}
+
 	/**
 	 * Metoda vraca nickname korisnika, tj. vrednost atributa korisnik
 	 * @return nickname korisnika kao String
@@ -47,7 +62,6 @@ public class TwitterPoruka {
 		return poruka;
 	}
 	
-
 	/**
 	 * Metoda postavlja poruku korisnika na unetu vrednost
 	 * @param poruka nova poruka korisnika
